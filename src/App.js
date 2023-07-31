@@ -40,7 +40,6 @@ function App() {
   .then (data => {
     setIsLoading(false);
     setError(null)
-    console.log(data)
     setMovies(data.results)
     
   })
@@ -112,9 +111,7 @@ const removeFromFavourites = (movie) => {
        />
        </Route>
 
-       <Route path="/favourites">
-      
-        </Route>
+       
         {/* Add a route for the movie details page */}
        <Route path="/movie/:id">
           <MovieDetails movies={movies}/>
