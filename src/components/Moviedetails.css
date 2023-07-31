@@ -1,0 +1,114 @@
+/* CSS for MovieDetails component */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins&display=swap');
+.movie-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 30px;
+  }
+  span {
+    font-size: 24px;
+    padding-right: 10px;
+  }
+  
+  .movie-details img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px;
+    margin-left: 22px;
+  }
+  
+  .movie-details > div {
+    text-align: left;
+  }
+  
+  .movie-details h1 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .movie-details .year,
+  .movie-details .votes {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #ffffff;
+  }
+  
+  .movie-details .overview {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: left;
+  }
+  
+  /* Center the loading message */
+  .movie-details.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    font-size: 20px;
+    color: #888;
+  }
+  
+  /* Style for error message */
+  .movie-details.error {
+    font-size: 20px;
+    color: #f44336;
+    text-align: center;
+  }
+  
+  /* CSS reset for body and html (optional) */
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+  }
+  
+  @media(max-width: 720px) {
+    .movie-details {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      
+      }
+      .movie-details img {
+        width: 200px;
+        height: auto;
+        border-radius: 8px;
+        margin: 10px;
+        margin: 20px 0 auto;
+      }
+      .movie-details h1 {
+        font-size: 40px;
+        font-weight: 400;
+        margin-bottom: 5px;
+      }
+      .movie-details .year,
+  .movie-details .votes {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #ffffff;
+  }
+  .votes {
+    padding-bottom: 10px;
+  }
+  }

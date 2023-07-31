@@ -1,0 +1,76 @@
+[debug] [2023-07-31T13:56:39.786Z] ----------------------------------------------------------------------
+[debug] [2023-07-31T13:56:39.789Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --debug
+[debug] [2023-07-31T13:56:39.789Z] CLI Version:   12.4.0
+[debug] [2023-07-31T13:56:39.790Z] Platform:      darwin
+[debug] [2023-07-31T13:56:39.790Z] Node Version:  v18.16.0
+[debug] [2023-07-31T13:56:39.791Z] Time:          Mon Jul 31 2023 16:56:39 GMT+0300 (East Africa Time)
+[debug] [2023-07-31T13:56:39.792Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-31T13:56:39.903Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-31T13:56:39.904Z] > authorizing via signed-in user (victorkoome485@gmail.com)
+[debug] [2023-07-31T13:56:39.905Z] [iam] checking project react-movie-app-77290 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-07-31T13:56:39.910Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/react-movie-app-77290:testIamPermissions [none]
+[debug] [2023-07-31T13:56:39.911Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/react-movie-app-77290:testIamPermissions x-goog-quota-user=projects/react-movie-app-77290
+[debug] [2023-07-31T13:56:39.911Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/react-movie-app-77290:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-31T13:56:42.246Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/react-movie-app-77290:testIamPermissions 200
+[debug] [2023-07-31T13:56:42.247Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/react-movie-app-77290:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-31T13:56:42.249Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/react-movie-app-77290 [none]
+[debug] [2023-07-31T13:56:43.078Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/react-movie-app-77290 200
+[debug] [2023-07-31T13:56:43.079Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/react-movie-app-77290 {"projectId":"react-movie-app-77290","projectNumber":"918717200540","displayName":"react-movie-app","name":"projects/react-movie-app-77290","resources":{"hostingSite":"react-movie-app-77290"},"state":"ACTIVE","etag":"1_941501b4-5417-4bbb-ae30-c089b07a0c58"}
+[info] 
+[info] === Deploying to 'react-movie-app-77290'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-07-31T13:56:43.088Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-movie-app-77290/versions [none]
+[debug] [2023-07-31T13:56:43.088Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-movie-app-77290/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-07-31T13:56:45.537Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-movie-app-77290/versions 200
+[debug] [2023-07-31T13:56:45.537Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-movie-app-77290/versions {"name":"projects/918717200540/sites/react-movie-app-77290/versions/0d485c0b6c5bd92e","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[react-movie-app-77290]: beginning deploy... 
+[info] i  hosting[react-movie-app-77290]: found 12 files in build 
+[debug] [2023-07-31T13:56:45.550Z] [hosting] uploading with 200 concurrency
+[debug] [2023-07-31T13:56:45.554Z] [hosting] hash cache [YnVpbGQ] stored for 12 files
+[debug] [2023-07-31T13:56:45.555Z] [hosting][hash queue][FINAL] {"max":1,"min":0,"avg":0,"active":0,"complete":12,"success":12,"errored":0,"retried":0,"total":12,"elapsed":3}
+[debug] [2023-07-31T13:56:45.556Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/918717200540/sites/react-movie-app-77290/versions/0d485c0b6c5bd92e:populateFiles [none]
+[debug] [2023-07-31T13:56:45.556Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/918717200540/sites/react-movie-app-77290/versions/0d485c0b6c5bd92e:populateFiles {"files":{"/asset-manifest.json":"0193d295882b192272408c7541e7f7ceefc7ccb4733e4cf155f07e2213592c13","/favicon.ico":"b72f7455f00e4e58792d2bca892abb068e2213838c0316d6b7a0d6d16acd1955","/index.html":"94c099a0d57189daa446c149c0b95fa807711b288665163111943209568f47ba","/logo192.png":"caff018b7f1e8fd481eb1c50d75b0ef236bcd5078b1d15c8bb348453fee30293","/logo512.png":"191fc21360b4ccfb1cda11a1efb97f489ed22672ca83f4064316802bbfdd750e","/manifest.json":"341d52628782f8ac9290bbfc43298afccb47b7cbfcee146ae30cf0f46bc30900","/robots.txt":"391d14b3c2f8c9143a27a28c7399585142228d4d1bdbe2c87ac946de411fa9a2","/static/css/main.707ec8cc.css":"697fcb28cdf050be00e1454e71dcf687942c252249003105b9fb9eef7bd34497","/static/css/main.707ec8cc.css.map":"cf7673213031f121d83bfc0fa8bd228ac2b79919218ea5c2b793f588b40cb990","/static/js/main.0ae40cc2.js":"49bc1e29e3cd14cdc3353e88b88d9db7e316da05f95d19c8328bf2e0eb793882","/static/js/main.0ae40cc2.js.LICENSE.txt":"f6b0f65f2ecf3fd5506028ffde7cf9b679a04b096c2f55156fb234635e8500ba","/static/js/main.0ae40cc2.js.map":"d6b7d30c91a9339b83d2b34d270a857cccf622c0738cf38c612e1e89bfe4b5b0"}}
+[info] i  hosting: adding files to version [0/12] (0%) 
+[debug] [2023-07-31T13:56:47.582Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/918717200540/sites/react-movie-app-77290/versions/0d485c0b6c5bd92e:populateFiles 200
+[debug] [2023-07-31T13:56:47.582Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/918717200540/sites/react-movie-app-77290/versions/0d485c0b6c5bd92e:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/react-movie-app-77290/versions/0d485c0b6c5bd92e/files"}
+[debug] [2023-07-31T13:56:47.583Z] [hosting][populate queue][FINAL] {"max":2030,"min":2030,"avg":2030,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2030}
+[debug] [2023-07-31T13:56:47.583Z] [hosting] uploads queued: 0
+[debug] [2023-07-31T13:56:47.583Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1690811807583}
+[info] i  hosting: upload complete 
+[info] ✔  hosting[react-movie-app-77290]: file upload complete 
+[debug] [2023-07-31T13:56:47.585Z] [hosting] deploy completed after 2045ms
+[debug] [2023-07-31T13:56:47.588Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "react-movie-app-77290"
+    },
+    "version": "projects/918717200540/sites/react-movie-app-77290/versions/0d485c0b6c5bd92e"
+  }
+]
+[info] i  hosting[react-movie-app-77290]: finalizing version... 
+[debug] [2023-07-31T13:56:47.590Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-movie-app-77290/versions/0d485c0b6c5bd92e updateMask=status%2Cconfig
+[debug] [2023-07-31T13:56:47.590Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-movie-app-77290/versions/0d485c0b6c5bd92e {"status":"FINALIZED","config":{}}
+[debug] [2023-07-31T13:56:49.466Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-movie-app-77290/versions/0d485c0b6c5bd92e 200
+[debug] [2023-07-31T13:56:49.470Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-movie-app-77290/versions/0d485c0b6c5bd92e {"name":"projects/918717200540/sites/react-movie-app-77290/versions/0d485c0b6c5bd92e","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-07-31T13:56:45.290007Z","createUser":{"email":"victorkoome485@gmail.com"},"finalizeTime":"2023-07-31T13:56:49.495849Z","finalizeUser":{"email":"victorkoome485@gmail.com"}}
+[debug] [2023-07-31T13:56:49.472Z] [hosting] finalized version for react-movie-app-77290:[object Object]
+[info] ✔  hosting[react-movie-app-77290]: version finalized 
+[info] i  hosting[react-movie-app-77290]: releasing new version... 
+[debug] [2023-07-31T13:56:49.477Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-movie-app-77290/channels/live/releases versionName=projects%2F918717200540%2Fsites%2Freact-movie-app-77290%2Fversions%2F0d485c0b6c5bd92e
+[debug] [2023-07-31T13:56:49.478Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-movie-app-77290/channels/live/releases {}
+[debug] [2023-07-31T13:56:51.444Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-movie-app-77290/channels/live/releases 200
+[debug] [2023-07-31T13:56:51.444Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/react-movie-app-77290/channels/live/releases {"name":"projects/918717200540/sites/react-movie-app-77290/channels/live/releases/1690811810966000","version":{"name":"projects/918717200540/sites/react-movie-app-77290/versions/0d485c0b6c5bd92e","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-07-31T13:56:45.290007Z","createUser":{"email":"victorkoome485@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtevIVBIVW2acAMtm9hN5ssZxcI3hIEnf8q3YBOXV-Qn=mo"},"finalizeTime":"2023-07-31T13:56:49.495849Z","finalizeUser":{"email":"victorkoome485@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtevIVBIVW2acAMtm9hN5ssZxcI3hIEnf8q3YBOXV-Qn=mo"}},"type":"DEPLOY","releaseTime":"2023-07-31T13:56:50.966Z","releaseUser":{"email":"victorkoome485@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtevIVBIVW2acAMtm9hN5ssZxcI3hIEnf8q3YBOXV-Qn=mo"}}
+[debug] [2023-07-31T13:56:51.445Z] [hosting] release: {"name":"projects/918717200540/sites/react-movie-app-77290/channels/live/releases/1690811810966000","version":{"name":"projects/918717200540/sites/react-movie-app-77290/versions/0d485c0b6c5bd92e","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-07-31T13:56:45.290007Z","createUser":{"email":"victorkoome485@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtevIVBIVW2acAMtm9hN5ssZxcI3hIEnf8q3YBOXV-Qn=mo"},"finalizeTime":"2023-07-31T13:56:49.495849Z","finalizeUser":{"email":"victorkoome485@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtevIVBIVW2acAMtm9hN5ssZxcI3hIEnf8q3YBOXV-Qn=mo"}},"type":"DEPLOY","releaseTime":"2023-07-31T13:56:50.966Z","releaseUser":{"email":"victorkoome485@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtevIVBIVW2acAMtm9hN5ssZxcI3hIEnf8q3YBOXV-Qn=mo"}}
+[info] ✔  hosting[react-movie-app-77290]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/react-movie-app-77290/overview
+[info] Hosting URL: https://react-movie-app-77290.web.app
