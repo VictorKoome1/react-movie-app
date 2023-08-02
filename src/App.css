@@ -11,7 +11,7 @@ body {
 .App {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 25px;
   background-color: #fff;
 }
 .header-links {
@@ -139,20 +139,11 @@ margin-left: 12px;
     display: flex;
     flex-direction: column;
   }
-  .header input {
-    padding: 8px;
-    font-size: 14px;
-    margin-right: 8px;
-  }
   
-  .header button {
-    padding: 9px 18px;
-    font-size: 16px;
-    
-  }
   .movie-poster {
     position: relative;
     max-width: 140px;
+    
   }
   
   .movie-poster img {
