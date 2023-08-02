@@ -77,7 +77,7 @@ const saveToLocalStorage = (items) => {
 const addToFavourites = (movie) => {
   // Check if the movie is already in the favorite list
   
-  if (!favouriteMovie.some((favMovie) => favMovie.id === movie.id)) {
+  if (favouriteMovie && !favouriteMovie.some((favMovie) => favMovie.id === movie.id)) {
     const updatedFavourites = [...favouriteMovie, movie];
     setFavouriteMovie(updatedFavourites);
     saveToLocalStorage(updatedFavourites);

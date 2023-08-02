@@ -6,7 +6,7 @@ const Movielist = ({movies, handleFavouriteMovieClick, FavouriteComponent, heade
     return (
       <>
       <h2>{header}</h2>
-        {movies.map((movie) => (
+        {movies && movies.map((movie) => (
             <div key={movie.id} className='movie-poster'>
               <Link to = {`/movie/${movie.id}`}>
             <img 
