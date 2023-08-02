@@ -1,14 +1,12 @@
-import { useCallback, useEffect, useState } from 'react';
+import React,{ useCallback, useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Movielist from './components/Movielist'
 import Header from './components/Header';
 import AddToFavourite from './components/addToFavourites';
 import RemoveFromFavourites from './components/removeFromFavourites';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MovieDetails from './components/MovieDetails';
 import Notification from './components/Notification';
-
-
 
 
 function App() {
@@ -17,8 +15,9 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [favouriteMovie, setFavouriteMovie] =  useState([]);
-  const [showNotification, setShowNotification] = useState(false)
-                 
+  const [showNotification, setShowNotification] = useState(false);
+
+
   const apiKey = 'e2dff10079dfcf3cde4ad83d6d2517e2';
   const baseUrl = 'https://api.themoviedb.org/3';
   const popularMovies = `${baseUrl}/movie/popular?api_key=${apiKey}`

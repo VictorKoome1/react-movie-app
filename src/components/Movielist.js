@@ -12,7 +12,6 @@ const Movielist = ({movies, handleFavouriteMovieClick, FavouriteComponent, heade
             <img 
             src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
             alt={movie.title} 
-      
             />
             </Link>
             <div onClick={() => handleFavouriteMovieClick(movie)}>
